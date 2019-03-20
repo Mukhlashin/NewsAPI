@@ -11,35 +11,35 @@ import android.view.ViewGroup;
 import com.example.newsapi.DetailActivity;
 import com.example.newsapi.R;
 import com.example.newsapi.modelnews.ArticlesItemNews;
-import com.example.newsapi.viewholder.NewsViewHolder;
+import com.example.newsapi.viewholder.HackerViewHolder;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
+public class HackerAdapter extends RecyclerView.Adapter<HackerViewHolder> {
 
     Context context;
     private List<ArticlesItemNews> data;
 
-    public NewsAdapter(Context context, List<ArticlesItemNews> data) {
+    public HackerAdapter(Context context, List<ArticlesItemNews> data2) {
         this.context = context;
-        this.data = data;
+        this.data = data2;
     }
 
     @NonNull
     @Override
-    public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(context).inflate(R.layout.news_viewholder, null);
-        return new NewsViewHolder(v, context);
+    public HackerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(context).inflate(R.layout.hacker_viewholder, null);
+        return new HackerViewHolder(v, context);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, final int i) {
-        newsViewHolder.tvTitle.setText(data.get(i).getTitle());
-        newsViewHolder.tvAuthor.setText(data.get(i).getAuthor());
-        newsViewHolder.tvDate.setText(data.get(i).getPublishedAt());
-        Picasso.get().load(data.get(i).getUrlToImage()).into(newsViewHolder.imgNews);
-        newsViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+    public void onBindViewHolder(@NonNull HackerViewHolder hackerViewHolder, final int i) {
+        hackerViewHolder.tvTitleHacker.setText(data.get(i).getTitle());
+        hackerViewHolder.tvAuthorHacker.setText(data.get(i).getAuthor());
+        hackerViewHolder.tvDateHacker.setText(data.get(i).getPublishedAt());
+        Picasso.get().load(data.get(i).getUrlToImage()).into(hackerViewHolder.imgHacker);
+        hackerViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent move = new Intent(context, DetailActivity.class);

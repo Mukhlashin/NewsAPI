@@ -11,35 +11,34 @@ import android.view.ViewGroup;
 import com.example.newsapi.DetailActivity;
 import com.example.newsapi.R;
 import com.example.newsapi.modelnews.ArticlesItemNews;
-import com.example.newsapi.viewholder.NewsViewHolder;
+import com.example.newsapi.viewholder.TechViewHolder;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
-
+public class TechAdapter extends RecyclerView.Adapter<TechViewHolder> {
     Context context;
     private List<ArticlesItemNews> data;
 
-    public NewsAdapter(Context context, List<ArticlesItemNews> data) {
+    public TechAdapter(Context context, List<ArticlesItemNews> data3) {
         this.context = context;
-        this.data = data;
+        this.data = data3;
     }
 
     @NonNull
     @Override
-    public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(context).inflate(R.layout.news_viewholder, null);
-        return new NewsViewHolder(v, context);
+    public TechViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(context).inflate(R.layout.tech_viewholder, null);
+        return new TechViewHolder(v, context);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, final int i) {
-        newsViewHolder.tvTitle.setText(data.get(i).getTitle());
-        newsViewHolder.tvAuthor.setText(data.get(i).getAuthor());
-        newsViewHolder.tvDate.setText(data.get(i).getPublishedAt());
-        Picasso.get().load(data.get(i).getUrlToImage()).into(newsViewHolder.imgNews);
-        newsViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+    public void onBindViewHolder(@NonNull TechViewHolder techViewHolder, final int i) {
+        techViewHolder.tvTitleTech.setText(data.get(i).getTitle());
+        techViewHolder.tvAuthorTech.setText(data.get(i).getAuthor());
+        techViewHolder.tvDateTech.setText(data.get(i).getPublishedAt());
+        Picasso.get().load(data.get(i).getUrlToImage()).into(techViewHolder.imgTech);
+        techViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent move = new Intent(context, DetailActivity.class);

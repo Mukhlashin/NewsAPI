@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewholder.HackerViewHolder"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_hacker"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/tv_title_hacker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Berita"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/img_hacker"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_author_hacker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Author"
+            android:layout_toRightOf="@id/img_hacker"
+            android:layout_alignBottom="@id/img_hacker"/>
+
+        <TextView
+            android:id="@+id/tv_date_hacker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Upload"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/img_hacker"
+            android:layout_marginRight="20sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

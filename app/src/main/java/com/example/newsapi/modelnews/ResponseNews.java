@@ -1,4 +1,4 @@
-package com.example.newsapi.model;
+package com.example.newsapi.modelnews;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -10,7 +10,7 @@ public class ResponseNews{
 	private int totalResults;
 
 	@SerializedName("articles")
-	private List<ArticlesItem> articles;
+	private List<ArticlesItemNews> articles;
 
 	@SerializedName("status")
 	private String status;
@@ -23,11 +23,11 @@ public class ResponseNews{
 		return totalResults;
 	}
 
-	public void setArticles(List<ArticlesItem> articles){
+	public void setArticles(List<ArticlesItemNews> articles){
 		this.articles = articles;
 	}
 
-	public List<ArticlesItem> getArticles(){
+	public List<ArticlesItemNews> getArticles(){
 		return articles;
 	}
 

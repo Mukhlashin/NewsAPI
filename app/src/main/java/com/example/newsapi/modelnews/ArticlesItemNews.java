@@ -1,8 +1,8 @@
-package com.example.newsapi.model;
+package com.example.newsapi.modelnews;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ArticlesItem{
+public class ArticlesItemNews {
 
 	@SerializedName("publishedAt")
 	private String publishedAt;
@@ -95,7 +95,7 @@ public class ArticlesItem{
 	@Override
  	public String toString(){
 		return 
-			"ArticlesItem{" + 
+			"ArticlesItemHacker{" +
 			"publishedAt = '" + publishedAt + '\'' + 
 			",author = '" + author + '\'' + 
 			",urlToImage = '" + urlToImage + '\'' + 

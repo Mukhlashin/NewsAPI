@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.newsapi">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".Splash"></activity>
+        <activity android:name=".viewholder.TechViewHolder" />
+        <activity android:name=".viewholder.HackerViewHolder" />
+        <activity android:name=".adapter.TechAdapter" />
+        <activity android:name=".adapter.HackerAdapter" />
+        <activity android:name=".DetailActivity" />
         <activity android:name=".adapter.NewsAdapter" />
         <activity android:name=".MainActivity">
             <intent-filter>

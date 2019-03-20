@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rvNews"
+        android:icon="@drawable/ic_filter_list_white_24dp"
+        android:title="Al Jazeera" />
+
+    <item
+        android:id="@+id/rvHacker"
+        android:icon="@drawable/ic_domain_white_24dp"
+        android:title="Hacker News" />
+
+    <item
+        android:id="@+id/rvTech"
+        android:icon="@drawable/ic_computer_white_24dp"
+        android:title="TechRadar" />
+
+</menu>
