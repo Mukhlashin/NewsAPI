@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Splash"
     android:orientation="vertical"
-    android:background="#FC5959">
+    android:background="@drawable/gradient">
 
     <ImageView
         android:id="@+id/img_splash"

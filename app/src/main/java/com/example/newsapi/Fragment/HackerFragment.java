@@ -1,6 +1,7 @@
 package com.example.newsapi.Fragment;
 
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.example.newsapi.MainActivity;
 import com.example.newsapi.R;
@@ -30,6 +32,8 @@ public class HackerFragment extends Fragment {
     RecyclerView rvHacker;
     HackerAdapter adapter;
     List<ArticlesItemNews> data;
+    FrameLayout frameLayout;
+    AnimationDrawable animationDrawable;
 
 
     public HackerFragment() {
@@ -44,6 +48,11 @@ public class HackerFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_hacker, container, false);
         rvHacker = layout.findViewById(R.id.rv_hacker);
         rvHacker.setAdapter(adapter);
+        frameLayout = layout.findViewById(R.id.frg_hacker);
+        animationDrawable = (AnimationDrawable) frameLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
         getDataHacker();
         return layout;
     }

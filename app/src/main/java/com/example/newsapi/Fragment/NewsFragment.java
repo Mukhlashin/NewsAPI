@@ -1,13 +1,16 @@
 package com.example.newsapi.Fragment;
 
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.example.newsapi.MainActivity;
 import com.example.newsapi.R;
@@ -30,6 +33,8 @@ public class NewsFragment extends Fragment {
     RecyclerView rvNews;
     NewsAdapter adapter;
     List<ArticlesItemNews> data;
+    FrameLayout frameLayout;
+    AnimationDrawable animationDrawable;
 
 
     public NewsFragment() {
@@ -44,7 +49,12 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View layout = inflater.inflate(R.layout.fragment_news, container, false);
-       rvNews = layout.findViewById(R.id.rv_news);
+        frameLayout = layout.findViewById(R.id.frg_news);
+        animationDrawable = (AnimationDrawable) frameLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+        rvNews = layout.findViewById(R.id.rv_news);
        rvNews.setAdapter(adapter);
        getDataNews();
        return layout;
