@@ -16,6 +16,13 @@
         android:layout_gravity="center"
         android:layout_marginTop="150dp"/>
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/loading"
+        android:src="@drawable/loading"
+        android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/tv_splash"
         android:textColor="@android:color/white"
